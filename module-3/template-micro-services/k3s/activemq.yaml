@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: activemq-server-container
+  name: activemq-server-container
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: activemq-server-container
+  template:
+    metadata:
+      labels:
+        app: activemq-server-container
+    spec:
+      containers:
+      - image: localhost:5000/activemq-server-image:0.1
+        name: activemq-server-container
+      imagePullSecrets:
+        - name: docker-registry-creds
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: activemq-server-container
+  name: activemq-server-container
+spec:
+  ports:
+  - port: 8161
+    protocol: TCP
+    targetPort: 8161
+    name: am1
+  - port: 61616
+    protocol: TCP
+    targetPort: 61616
+    name: amq2
+  - port: 5672
+    protocol: TCP
+    targetPort: 5672
+    name: amq3
+  - port: 61613
+    protocol: TCP
+    targetPort: 61613
+    name: amq4
+  - port: 1883
+    protocol: TCP
+    targetPort: 1883
+    name: amq5
+  - port: 61614
+    protocol: TCP
+    targetPort: 61614
+    name: amq6
+  selector:
+    app: activemq-server-container
+  type: NodePort
+

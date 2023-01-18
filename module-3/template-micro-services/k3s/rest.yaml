@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: rest
+  name: rest
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rest
+  template:
+    metadata:
+      labels:
+        app: rest
+    spec:
+      containers:
+      - image: localhost:5000/rest-server-image:0.2
+        name: rest
+      imagePullSecrets:
+        - name: docker-registry-creds
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: rest
+  name: rest
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: rest
+  type: NodePort
+

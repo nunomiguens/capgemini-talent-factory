@@ -1,0 +1,16 @@
+/vagrant/templates-main/module-2/rest-server/src/main/java/com/capgemini/pt/talentfactory/rest/KafkaConsumerConfig.java
+/vagrant/templates-main/module-2/rest-server/src/main/java/com/capgemini/pt/talentfactory/rest/controllers/RestaurantController.java
+/vagrant/templates-main/module-2/rest-server/src/main/java/com/capgemini/pt/talentfactory/rest/models/Restaurante.java
+/vagrant/templates-main/module-2/rest-server/src/main/java/com/capgemini/pt/talentfactory/rest/repositories/RepositoryEncomenda.java
+/vagrant/templates-main/module-2/rest-server/src/main/java/com/capgemini/pt/talentfactory/rest/repositories/RepositoryRestaurante.java
+/vagrant/templates-main/module-2/rest-server/src/main/java/com/capgemini/pt/talentfactory/rest/models/Menu.java
+/vagrant/templates-main/module-2/rest-server/src/main/java/com/capgemini/pt/talentfactory/rest/repositories/RepositoryOpcaoMenu.java
+/vagrant/templates-main/module-2/rest-server/src/main/java/com/capgemini/pt/talentfactory/rest/KafkaTopicConfig.java
+/vagrant/templates-main/module-2/rest-server/src/main/java/com/capgemini/pt/talentfactory/rest/models/OpcaoMenu.java
+/vagrant/templates-main/module-2/rest-server/src/main/java/com/capgemini/pt/talentfactory/rest/KafkaProducerConfig.java
+/vagrant/templates-main/module-2/rest-server/src/main/java/com/capgemini/pt/talentfactory/rest/models/Encomenda.java
+/vagrant/templates-main/module-2/rest-server/src/main/java/com/capgemini/pt/talentfactory/rest/Application.java
+/vagrant/templates-main/module-2/rest-server/src/main/java/com/capgemini/pt/talentfactory/rest/repositories/RepositoryHistoricoEncomenda.java
+/vagrant/templates-main/module-2/rest-server/src/main/java/com/capgemini/pt/talentfactory/rest/repositories/RepositoryMenu.java
+/vagrant/templates-main/module-2/rest-server/src/main/java/com/capgemini/pt/talentfactory/rest/MessageListener.java
+/vagrant/templates-main/module-2/rest-server/src/main/java/com/capgemini/pt/talentfactory/rest/models/HistoricoEncomenda.java

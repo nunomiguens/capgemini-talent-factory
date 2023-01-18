@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: kafka-server
+  name: kafka-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kafka-server
+  template:
+    metadata:
+      labels:
+        app: kafka-server
+    spec:
+      containers:
+      - image: bitnami/kafka:latest
+        name: kafka-server
+        env:
+        #- name: KAFKA_POD_IP
+        #  valueFrom:
+        #    fieldRef:
+        #      fieldPath: status.podIP
+        - name: ALLOW_PLAINTEXT_LISTENER
+          value: 'yes'
+        - name: KAFKA_CFG_ZOOKEEPER_CONNECT
+          value: 'zookeeper-server:2181'
+        #- name: KAFKA_ADVERTISED_HOST_NAME
+        #  value: kafka-server
+        - name: KAFKA_LISTENERS
+          value: PLAINTEXT://:9092
+        - name: KAFKA_ADVERTISED_LISTENERS
+          value: PLAINTEXT://kafka-server:9092
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: kafka-server
+  name: kafka-server
+spec:
+  ports:
+  - port: 9092
+    protocol: TCP
+    targetPort: 9092
+    name: kafka
+  selector:
+    app: kafka-server
+  type: NodePort
+

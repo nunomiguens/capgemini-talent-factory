@@ -1,0 +1,16 @@
+com/capgemini/pt/talentfactory/rest/models/Restaurante.class
+com/capgemini/pt/talentfactory/rest/KafkaConsumerConfig.class
+com/capgemini/pt/talentfactory/rest/models/OpcaoMenu.class
+com/capgemini/pt/talentfactory/rest/repositories/RepositoryRestaurante.class
+com/capgemini/pt/talentfactory/rest/Application.class
+com/capgemini/pt/talentfactory/rest/repositories/RepositoryMenu.class
+com/capgemini/pt/talentfactory/rest/repositories/RepositoryHistoricoEncomenda.class
+com/capgemini/pt/talentfactory/rest/MessageListener.class
+com/capgemini/pt/talentfactory/rest/repositories/RepositoryEncomenda.class
+com/capgemini/pt/talentfactory/rest/models/HistoricoEncomenda.class
+com/capgemini/pt/talentfactory/rest/models/Encomenda.class
+com/capgemini/pt/talentfactory/rest/models/Menu.class
+com/capgemini/pt/talentfactory/rest/controllers/RestaurantController.class
+com/capgemini/pt/talentfactory/rest/KafkaProducerConfig.class
+com/capgemini/pt/talentfactory/rest/KafkaTopicConfig.class
+com/capgemini/pt/talentfactory/rest/repositories/RepositoryOpcaoMenu.class

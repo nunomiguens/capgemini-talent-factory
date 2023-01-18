@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: zookeeper-server
+  name: zookeeper-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zookeeper-server
+  template:
+    metadata:
+      labels:
+        app: zookeeper-server
+    spec:
+      containers:
+      - image: bitnami/zookeeper:latest
+        name: zookeeper-server
+        env:
+        - name: ALLOW_ANONYMOUS_LOGIN
+          value: 'yes'
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: zookeeper-server
+  name: zookeeper-server
+spec:
+  ports:
+  - port: 2181
+    protocol: TCP
+    targetPort: 2181
+    name: zk1
+  - port: 2888
+    protocol: TCP
+    targetPort: 2888
+    name: zk2
+  - port: 3888
+    protocol: TCP
+    targetPort: 3888
+    name: zk3
+  selector:
+    app: zookeeper-server
+  type: NodePort
+
