@@ -12,10 +12,8 @@
 
 ```sh
 cd ~
-git clone https://gitlab.altran.pt/talentfactory/javabackend/nuno-filipe.miguens.git
-cd nuno-filipe.miguens
-git checkout module-4
-cd template-cloud
+git clone https://github.com/nunomiguens/capgemini-talent-factory.git
+cd module-4/template-cloud
 ```
 
 ## ![](https://img.icons8.com/color/19/null/amazon-web-services.png) Setup LocalStack 
