@@ -12,10 +12,8 @@ docker registry.
 
 ```sh
 cd ~
-git clone https://gitlab.altran.pt/talentfactory/javabackend/nuno-filipe.miguens.git
-cd nuno-filipe.miguens
-git checkout module-3
-cd template-micro-services
+git clone https://github.com/nunomiguens/capgemini-talent-factory.git
+cd module-3/template-micro-services
 docker ps
 docker stop registry tomcat-container git-server-container
 docker system prune -a
